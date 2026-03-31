@@ -17,3 +17,8 @@ This project is being expanded step by step to cover:
 - Azure administration tasks
 - production design concepts
 - architect-level decision making
+
+### Subnets:
+- subnet-web -> 10.1.1.0/24
+- subnet-app -> 10.1.2.0/24
+- subnet-mgmt -> 10.1.3.0/24

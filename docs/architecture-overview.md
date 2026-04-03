@@ -50,3 +50,13 @@ This project is being expanded step by step to cover:
 - Added vm-mgmt-01 in subnet-mgmt
 - Used Standard_D2s_v3 due to regional SKU availability
 - Management VM is the secure administrative entry point for the environment
+
+## Final Network Behavior
+
+- Internet access is allowed only to the web tier (HTTP/HTTPS)
+- App tier is fully private with no public exposure
+- Administrative access is routed through vm-mgmt-01
+- Internal communication:
+  - Mgmt → Web/App over SSH (22)
+  - Web → App over application port (8080)
+- Direct SSH from internet to web/app is blocked

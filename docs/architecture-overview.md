@@ -34,3 +34,9 @@ This project is being expanded step by step to cover:
 
 ### nsg-mgmt
 - Allow inbound SSH (22) only from my public IP
+
+## Validation Results
+
+- vm-web-01 is reachable from the internet over HTTP
+- vm-app-01 has no public IP, so it is not directly accessible from the internet
+- This supports a layered architecture where the app tier remains private

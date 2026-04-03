@@ -44,3 +44,9 @@ This project is being expanded step by step to cover:
 - vm-web-01 is reachable from the internet over HTTP
 - Direct SSH access to the web subnet is blocked because nsg-web does not allow port 22
 - This supports a more secure design where web traffic is public but administrative access is separated
+
+## Management Tier
+
+- Added vm-mgmt-01 in subnet-mgmt
+- Used Standard_D2s_v3 due to regional SKU availability
+- Management VM is the secure administrative entry point for the environment

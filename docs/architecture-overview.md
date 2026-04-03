@@ -40,3 +40,7 @@ This project is being expanded step by step to cover:
 - vm-web-01 is reachable from the internet over HTTP
 - vm-app-01 has no public IP, so it is not directly accessible from the internet
 - This supports a layered architecture where the app tier remains private
+
+- vm-web-01 is reachable from the internet over HTTP
+- Direct SSH access to the web subnet is blocked because nsg-web does not allow port 22
+- This supports a more secure design where web traffic is public but administrative access is separated

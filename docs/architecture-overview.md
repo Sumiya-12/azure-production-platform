@@ -60,3 +60,9 @@ This project is being expanded step by step to cover:
   - Mgmt → Web/App over SSH (22)
   - Web → App over application port (8080)
 - Direct SSH from internet to web/app is blocked
+
+## Exposure Review
+
+- vm-web-01 has a public IP and serves as the public web entry point
+- vm-app-01 has no public IP and remains private
+- vm-mgmt-01 has a public IP and serves as the controlled administrative entry point

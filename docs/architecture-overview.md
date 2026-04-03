@@ -66,3 +66,22 @@ This project is being expanded step by step to cover:
 - vm-web-01 has a public IP and serves as the public web entry point
 - vm-app-01 has no public IP and remains private
 - vm-mgmt-01 has a public IP and serves as the controlled administrative entry point
+
+## Phase 2 Progress - Public Entry Review
+
+### Exposure Review
+- vm-web-01 has a public IP and is currently reachable from the internet
+- vm-mgmt-01 has a public IP and is used as the controlled administrative entry point
+- vm-app-01 has no public IP and remains private
+
+### Load Balancer
+- Created Azure Load Balancer: lb-web
+- Created frontend configuration and backend pool
+- Added vm-web-01 to the backend pool
+- Created health probe on port 80
+- Created load balancing rule for HTTP (port 80)
+
+### Validation
+- Verified that the load balancer public IP serves the nginx page successfully
+- Current state still allows direct public access to vm-web-01
+- Planned next step: remove direct public IP exposure from vm-web-01 and enforce the load balancer as the single public entry point
